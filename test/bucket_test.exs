@@ -3,10 +3,10 @@ defmodule KV.BucketTest do
 
   setup do
     {:ok, bucket} = KV.Bucket.start_link
-    {:ok, bucket: bucket}
+    {:ok, test_context: bucket}
   end
 
-  test "stores values by key", %{bucket: bucket} do
+  test "stores values by key", %{test_context: bucket} do
     assert KV.Bucket.get(bucket, "milk") == nil
 
     KV.Bucket.put(bucket, "milk", 3)
