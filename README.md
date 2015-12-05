@@ -1,6 +1,3 @@
-# KV
-<<<<<<< HEAD
-
 **TODO: Add description**
 
 ## Installation
@@ -19,5 +16,3 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
           [applications: [:kv]]
         end
 
-=======
->>>>>>> 0b27a923d83de61ea68967ee8edee8e036142344
