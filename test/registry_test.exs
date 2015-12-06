@@ -1,8 +1,12 @@
 defmodule KV.RegistryTest do
   use ExUnit.Case, async: true
 
-  test "creates buckets" do
+  setup do
     {:ok, registry} = KV.Registry.start_link
+    {:ok, registry: registry}
+  end
+
+  test "creates buckets", %{registry: registry} do
     assert KV.Registry.lookup(registry, "shopping") == :error
 
     KV.Registry.create(registry, "shopping")
