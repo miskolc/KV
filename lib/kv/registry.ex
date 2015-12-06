@@ -35,6 +35,9 @@ defmodule KV.Registry do
 
   ## Server Callbacks
 
+  # Returning {:ok, state} will cause
+  # start_link/3 to return {:ok, pid}
+  # and the process to enter its loop.
   def init(:ok) do
     {:ok, HashDict.new}
   end
